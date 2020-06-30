@@ -1,13 +1,13 @@
 #!/bin/sh
 
-read -p domain= domain
-read -p env= env
-read -p password= password
-read -p path= path
-read -p s3folder= s3folder
-read -p site= site
-read -p ticket= ticket
-read -p type= type
+domain=
+env=
+password=
+path=
+s3folder=
+site=
+ticket=
+type=
 
 user=$site
 dir=$HOME/$site
