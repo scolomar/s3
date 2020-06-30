@@ -12,7 +12,6 @@ read -p type= type
 user=$site
 dir=$HOME/$site
 mkdir --parents $dir
-cd $dir
 wget https://$domain/$path/$site/ --user $user --password $password --recursive --no-parent --directory-prefix $dir
 md5sum $dir/$domain/$path/$site/*
 aws s3 cp $dir/$domain/$path/$site/ s3://$s3folder/$type-$env-$site-$ticket/ --recursive --exclude "index.html" --exclude "robots.txt";
